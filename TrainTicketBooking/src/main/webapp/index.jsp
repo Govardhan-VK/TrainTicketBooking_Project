@@ -9,7 +9,7 @@
 <body>
 Welcome
 <br>
-<a href="#"><button>Login</button></a><br>
-<a href="#"><button>Register</button></a>
+<a href="Login.jsp"><button>Login</button></a><br>
+<a href="Register.jsp"><button>Register</button></a>
 </body>
 </html>

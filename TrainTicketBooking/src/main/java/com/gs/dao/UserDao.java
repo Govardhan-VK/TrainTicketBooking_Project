@@ -33,5 +33,19 @@ public class UserDao {
 		}
 		return user;
 	}
+	
+	public boolean registerUser(String email,String password) throws Exception
+	{
+		pst = con.prepareStatement("insert into c##izuku.TTB_USERS values(?,?)");
+		pst.setString(1, email);
+		pst.setString(2, password);
+		int num = pst.executeUpdate();
+		if(num>0)
+			return true;
+		else
+			return false;
+		
+		
+	}
 
 }
