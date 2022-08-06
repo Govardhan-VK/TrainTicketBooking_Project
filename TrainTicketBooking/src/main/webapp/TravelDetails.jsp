@@ -60,7 +60,8 @@ if(session.getAttribute("user")==null)
 </select>
 <br><br>
 
-<input type="text" id="price" name="price" disabled> 
+
+<input type="hidden" id="price" name="price">
 <input type="submit" id="submitform" value="Next">
 </form>
 <script>
@@ -184,7 +185,7 @@ document.getElementById('bookdate').setAttribute('min', minDate);
 				document.getElementById('price').value=price;
 				total=price;
 				}
-				alert("Single person charge for selected Route + Class charge: "+total);
+				alert("Single person charge for selected Route + Class charge: "+document.getElementById('price').value);
 				return true;
 				}
    }
