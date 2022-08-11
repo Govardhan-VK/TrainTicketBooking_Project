@@ -3,7 +3,6 @@ package com.gs.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +21,8 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		PrintWriter out = response.getWriter();
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
@@ -33,11 +34,17 @@ public class LoginServlet extends HttpServlet {
 			if (user != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
-				RequestDispatcher rd = request.getRequestDispatcher("mainPage.jsp");
-				rd.forward(request, response);
+				/*
+				 * RequestDispatcher rd = request.getRequestDispatcher("mainPage.jsp");
+				 * rd.forward(request, response);
+				 */
+				response.sendRedirect("mainPage.jsp");
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
-				rd.forward(request, response);
+				out.println("<h1 style='color: red;'>Login Failed</h1><a href='index.jsp'>Please try again</a>");
+				/*
+				 * RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+				 * rd.forward(request, response);
+				 */
 			}
 
 		} catch (Exception e) {

@@ -1,0 +1,158 @@
+@charset "ISO-8859-1";
+body {
+ background: #002233;
+  overflow: hidden;
+  margin: 3rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+select,
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  border: none;
+  border-radius: 1.3rem;
+  background: transparent;
+  color: #002233;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  width: 15rem;
+  transition: 0.5s;
+  color-scheme: dark;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 21rem;
+  line-height: 1;
+  background-image: linear-gradient(220deg, dodgerblue, #002233);
+  border: none;
+  color: grey;
+  overflow: hidden;
+  border-radius: 0.7rem;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+}
+
+.select::before {
+  background: none;
+  padding: 0.2rem;
+  width: 5rem;
+  text-align: center;
+}
+.select.from::before {
+  content: "From";
+}
+.select.to::before {
+  content: "To";
+}
+.select.date::before {
+  content: "Date";
+}
+.select.date::after {
+  content: "";
+}
+.select.class::before {
+  content: "Class";
+}
+.select.quota::before {
+  content: "Quota";
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0.3rem;
+  right: 0rem;
+  color: whitesmoke;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+/*.select:hover::after {
+   color: #23b499;
+}*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: none;
+  padding: 20px;
+  width: 80%;
+  justify-content: left;
+  height: 3rem;
+  font-size: 2rem;
+}
+.grid-item {
+  background-color: none;
+  padding: 10px;
+  width: 20rem;
+}
+
+.grid-item2 {
+  background-color: none;
+  padding: 20px;
+  width: 30rem;
+  font-size: 2rem;
+  margin-left: 12px;
+}
+
+.inner {
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 1rem;
+  position: relative;
+  bottom: 1px;
+  color: dodgerblue;
+  margin-left: 1.5rem;
+  text-shadow: 0 7px 10px rgba(0, 0, 0, 0.8);
+}
+
+input[type="submit"] {
+  background-color: #002233;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 3rem;
+  text-align: center;
+  width: 200px;
+  margin-top: 9rem;
+  transition: 0.5s;
+  margin-left: 69rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+  color: dodgerblue;
+}
+
+input:hover,
+select:hover,
+.select:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(169% + 1.3px);
+  height: 303px;
+}
+
+.wave-bottom .shape-fill {
+  fill: #1e90ff;
+}

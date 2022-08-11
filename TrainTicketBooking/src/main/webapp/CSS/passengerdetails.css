@@ -1,0 +1,162 @@
+@charset "ISO-8859-1";
+body {
+  background: #002233;
+  overflow: hidden;
+  margin: 3rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+#box {
+  overflow-y: auto;
+  height: 15rem;
+}
+
+#box::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+#box::-webkit-scrollbar-track {
+  background: #002233; /* color of the tracking area */
+}
+#box::-webkit-scrollbar-thumb {
+  background-color: dodgerblue; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: none; /* creates padding around scroll thumb */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: none;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+input[type="text"] {
+  width: 15rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(220deg, dodgerblue, #002233);
+  border: none;
+  margin-left: 3px;
+  transition: transform 0.2s;
+}
+input[type="number"] {
+  width: 3rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(220deg, dodgerblue, #002233);
+  border: none;
+  margin-left: 3px;
+  transition: transform 0.2s;
+}
+select {
+  width: 13rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(220deg, dodgerblue, #002233);
+  border: none;
+  margin-left: 3px;
+  transition: transform 0.2s;
+}
+
+#lname {
+  width: 15.5rem;
+  border-radius: 0.5rem;
+  background-color: #002233;
+  box-shadow: 0 -2px 3px white inset;
+  color: dodgerblue;
+}
+#lage {
+  width: 3.5rem;
+  border-radius: 0.5rem;
+  background-color: #002233;
+  box-shadow: 0 -2px 3px white inset;
+  color: dodgerblue;
+}
+#lgender {
+  width: 13rem;
+  border-radius: 0.5rem;
+  background-color: #002233;
+  box-shadow: 0 -2px 3px white inset;
+  color: dodgerblue;
+}
+#lbutton,
+#llable {
+  width: 9rem;
+  border-radius: 0.5rem;
+  background: transparent;
+}
+
+#lbutton {
+  background-color: #002233;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+}
+#lbutton i {
+  color: red;
+}
+
+#btn {
+  background-color: #002233;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  text-align: center;
+  width: 100px;
+  transition: 0.5s;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+  color: dodgerblue;
+  margin-left: 23rem;
+}
+
+input[type="submit"] {
+  background-color: #002233;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 3rem;
+  text-align: center;
+  width: 235px;
+  margin-top: 11rem;
+  transition: 0.5s;
+  margin-left: 68rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+  color: dodgerblue;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+  transform: scale(1.1);
+}
+
+input[type="submit"]:hover,
+#btn:hover,
+#lbutton:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(169% + 1.3px);
+  height: 303px;
+}
+
+.wave-bottom .shape-fill {
+  fill: #1e90ff;
+}
